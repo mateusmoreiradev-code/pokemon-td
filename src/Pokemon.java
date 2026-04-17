@@ -27,4 +27,54 @@ public class Pokemon {
     public void setNomePokemon(String nomePokemon){
         this.nomePokemon = nomePokemon;
     }
+
+    public int getCustoPokemon(){
+        return custoPokemon;
+    }
+    public void setCustoPokemon(int custoPokemon){
+        this.custoPokemon = custoPokemon;
+    }
+
+    public int getAtaquePokemon(){
+        return ataquePokemon;
+    }
+    public void setAtaquePokemon(int ataquePokemon){
+        this.ataquePokemon = ataquePokemon;
+    }
+
+    public TipoElemental getTipoPokemon() {
+        return tipoPokemon;
+    }
+    public void setTipoPokemon(TipoElemental tipoPokemon){
+        this.tipoPokemon = tipoPokemon;
+    }
+
+    public double getAlcancePokemon(){
+        return alcancePokemon;
+    }
+    public void setAlcancePokemon(double alcancePokemon){
+        this.alcancePokemon = alcancePokemon;
+    }
+
+    public double getVelocidadeDeAtaquePokemon(){
+        return velocidadeDeAtaquePokemon;
+    }
+    public void setVelocidadeDeAtaquePokemon(double velocidadeDeAtaquePokemon){
+        this.velocidadeDeAtaquePokemon = velocidadeDeAtaquePokemon;
+    }
+
+    public List<Habilidades> getHabilidadesPokemon() {
+        return habilidadesPokemon;
+    }
+    public void setHabilidadesPokemon(List<Habilidades> habilidadesPokemon){
+        this.habilidadesPokemon = habilidadesPokemon;
+    }
+
+    public int getEvolucaoPokemon() {
+        return evolucaoPokemon;
+    }
+
+    public void setEvolucaoPokemon(int evolucaoPokemon) {
+        this.evolucaoPokemon = evolucaoPokemon;
+    }
 }

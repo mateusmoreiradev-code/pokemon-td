@@ -1,5 +1,8 @@
-public class Pokemon {
-    protected int idPokemon;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pokemon extends Habilidades {
+    private int idPokemon;
     protected String nomePokemon;
     protected int custoPokemon;
     protected int ataquePokemon;
@@ -10,6 +13,8 @@ public class Pokemon {
     protected int evolucaoPokemon;
 
     public Pokemon(int idPokemon, String nomePokemon, int custoPokemon, int ataquePokemon, TipoElemental tipoPokemon, double alcancePokemon, double velocidadeDeAtaquePokemon, List<Habilidades> habilidadesPokemon, int evolucaoPokemon){
+        super(idPokemon, nomePokemon, custoPokemon, tipoPokemon, ataquePokemon, 0, true, AreaDeEfeito.Danoúnico);
+        
         this.idPokemon = idPokemon;
         this.nomePokemon = nomePokemon;
         this.custoPokemon = custoPokemon;
@@ -76,5 +81,19 @@ public class Pokemon {
 
     public void setEvolucaoPokemon(int evolucaoPokemon) {
         this.evolucaoPokemon = evolucaoPokemon;
+    }
+
+    public String toString() {
+        return "Pokemon{" +
+                "idPokemon=" + idPokemon +
+                ", nomePokemon='" + nomePokemon + '\'' +
+                ", custoPokemon=" + custoPokemon +
+                ", ataquePokemon=" + ataquePokemon +
+                ", tipoPokemon=" + tipoPokemon +
+                ", alcancePokemon=" + alcancePokemon +
+                ", velocidadeDeAtaquePokemon=" + velocidadeDeAtaquePokemon +
+                ", habilidadesPokemon=" + habilidadesPokemon +
+                ", evolucaoPokemon=" + evolucaoPokemon +
+                '}';
     }
 }

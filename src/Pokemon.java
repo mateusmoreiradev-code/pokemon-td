@@ -13,7 +13,7 @@ public class Pokemon extends Habilidades {
     protected int evolucaoPokemon;
 
     public Pokemon(int idPokemon, String nomePokemon, int custoPokemon, int ataquePokemon, TipoElemental tipoPokemon, double alcancePokemon, double velocidadeDeAtaquePokemon, List<Habilidades> habilidadesPokemon, int evolucaoPokemon){
-        super(idPokemon, nomePokemon, custoPokemon, tipoPokemon, ataquePokemon, 0, true, AreaDeEfeito.Danoúnico);
+        super(idPokemon, nomePokemon, custoPokemon, tipoPokemon, ataquePokemon, 0, true, AreaDeEfeito.DanoUnico);
         
         this.idPokemon = idPokemon;
         this.nomePokemon = nomePokemon;

@@ -1,5 +1,5 @@
 public enum AreaDeEfeito {
-    Danoúnico, 
-    Danoemcadeia,
-    Danoemarea;
+    DanoUnico,
+    DanoEmCadeia,
+    DanoEmArea;
 }

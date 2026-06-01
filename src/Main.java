@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Main {
     private static final Scanner pokebola = new Scanner(System.in);
-    private List<Habilidades> habilidade = new ArrayList<>();
-    private List<Pokemon> pokemons = new ArrayList<>();
+    public List<Habilidades> habilidades = new ArrayList<>();
+    public List<Pokemon> pokemons = new ArrayList<>();
 
     private static int idHabilidade = 1;
     private static int idPokemon = 1;
@@ -262,7 +262,7 @@ public class Main {
                 }
 
                 Habilidades habilidade = new Habilidades(idHabilidade, nomeHabilidade, custoHabilidade, teHabilidade, danoHabilidade, cooldownHabilidade, isAtivaHabilidade, adeHabilidade);
-
+                habilidades.add(habilidade);
                 idHabilidade++;
                 pokebola.nextLine();
 
@@ -272,7 +272,7 @@ public class Main {
                 cadastrar();
 
             case "0":
-                System.out.println("Cadastro encerrado");
+                System.out.println("Cadastro encerrado!");
                 break;
             default:
                 System.out.println("Valor inválido!!!");

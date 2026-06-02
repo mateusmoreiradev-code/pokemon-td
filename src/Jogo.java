@@ -2,11 +2,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Jogo {
-    public int HUD;
-    public List<Fase> listaFases = new ArrayList<>();
+    private int idHUD;
+    private List<Fase> listaFases = new ArrayList<>();
 
-    public Jogo(int HUD, List<Fase> listaFases){
-        this.HUD = HUD;
+    public Jogo(int idHUD, List<Fase> listaFases){
+        this.idHUD = idHUD;
+        this.listaFases = listaFases;
+    }
+
+    public int getIdHUD(){return idHUD;}
+    public void setIdHUD(int idHUD){
+        this.idHUD = idHUD;
+    }
+
+    public List<Fase> getListaFases(){ return listaFases;}
+    public void setListaFases(List<Fase> listaFases){
         this.listaFases = listaFases;
     }
 }

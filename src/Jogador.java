@@ -1,9 +1,9 @@
 public class Jogador {
-    public int idJogador;
-    public int vida;
-    public int pokeDollar;
-    public int pokeCoins;
-    public int experience;
+    private int idJogador;
+    private int vida;
+    private int pokeDollar;
+    private int pokeCoins;
+    private int experience;
 
     public Jogador(int idJogador, int vida, int pokeDollar, int pokeCoins, int experience){
         this.idJogador = idJogador;

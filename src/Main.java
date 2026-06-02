@@ -11,14 +11,6 @@ public class Main {
     private static int idHabilidade = 1;
     private static int idPokemon = 1;
 
-    static void limparConsole(){
-        try{
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
-        } catch (final Exception e){
-            System.out.println(e);
-        }
-    }
 
     static void cadastrar(){
         Scanner menuCadastro = new Scanner(System.in);
@@ -262,7 +254,7 @@ public class Main {
                 }
 
                 Habilidades habilidade = new Habilidades(idHabilidade, nomeHabilidade, custoHabilidade, teHabilidade, danoHabilidade, cooldownHabilidade, isAtivaHabilidade, adeHabilidade);
-                habilidades.add(habilidade);
+                //habilidades.add(habilidade);
                 idHabilidade++;
                 pokebola.nextLine();
 
@@ -281,10 +273,14 @@ public class Main {
     }
 
     public static void main(String[] args){
+
+        Interface hud = new Interface();
+        hud.menuPrincipal();
+
         Habilidades habilidade1 = new Habilidades(1, "Choque do trovão", 50, TipoElemental.ELÉTRICO, 100, 2.5, true, AreaDeEfeito.DanoUnico);
         Pokemon pikachu = new Pokemon(1, "pikachu", 150, 1, TipoElemental.ELÉTRICO, 4, 2, Arrays.asList(habilidade1), 1);
 
-        cadastrar();
+        //cadastrar();
 
 
     }

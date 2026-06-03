@@ -107,7 +107,8 @@ public class Main {
                             tipoPokemon = TipoElemental.PLANTA;
                             break;
                         default:
-                            System.out.println("Valor inválido! Tente novamente.");
+                            hud.telaErro("Valor inválido! Tente novamente.");
+                            textArt.showWIP();
                             return;
                     }
 
@@ -127,17 +128,15 @@ public class Main {
                     idPokemon++;
                     pokebola.nextLine();
 
-                    System.out.println("\nPokémon cadastrado com sucesso!!!");
+                    hud.telaSucesso("Pokemon Cadastrado");
                     pokemons.add(pokemon);
 
                     System.out.println(pokemon + "\n");
-
-                    return;
+                    break;
                 case "2":
                     System.out.println("\n");
-                    System.out.println("""
-                            - - - - CADASTRAR HABILIDADE - - - -
-                            Digite o nome da habilidade:""");
+                    hud.titulo("CADASTRAR HABILIDADE");
+                    System.out.println("Digite o nome da habilidade:");
                     String nomeHabilidade = pokebola.nextLine();
 
                     System.out.println("Digite o custo da habilidade: ");
@@ -270,6 +269,7 @@ public class Main {
                     break;
                 default:
                     textArt.showWIP();
+                    System.out.println("\n");
                     break;
             }
         }

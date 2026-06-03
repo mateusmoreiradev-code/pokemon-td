@@ -10,6 +10,8 @@ public class Interface {
         }
     }
 
+    public static void pular(){System.out.println("\n");}
+
     public static void linha() {
         System.out.println("+-------------------------------------------------+");
     }
@@ -43,34 +45,38 @@ public class Interface {
     }
 
     public static void telaSucesso(String mensagem) {
+        pular();
         linha();
         System.out.println("|              OPERAÇÃO REALIZADA                 |");
         linha();
-        System.out.printf("| %-48s |%n", mensagem);
+        System.out.printf("| %-47s |%n", mensagem);
         linha();
     }
 
     public static void telaErro(String mensagem) {
+        pular();
         linha();
         System.out.println("|                    ERRO                         |");
         linha();
-        System.out.printf("| %-48s |%n", mensagem);
+        System.out.printf("| %-47s |%n", mensagem);
         linha();
     }
 
     public static void telaAviso(String mensagem) {
+        pular();
         linha();
         System.out.println("|                   AVISO                         |");
         linha();
-        System.out.printf("| %-48s |%n", mensagem);
+        System.out.printf("| %-47s |%n", mensagem);
         linha();
     }
 
     public static void telaConfirmacao(String mensagem) {
+        pular();
         linha();
         System.out.println("|                CONFIRMAÇÃO                      |");
         linha();
-        System.out.printf("| %-48s |%n", mensagem);
+        System.out.printf("| %-47s |%n", mensagem);
         linha();
     }
 

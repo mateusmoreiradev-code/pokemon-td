@@ -1,5 +1,4 @@
 
-
 public class Interface {
 
     public static void limparTela() {
@@ -41,38 +40,6 @@ public class Interface {
 
         linha();
         System.out.print("Escolha uma opção: ");
-    }
-
-    public static void menuCadastroPokemon() {
-        limparTela();
-
-        titulo("CADASTRO DE POKEMON");
-
-        System.out.println("| Nome                                             |");
-        System.out.println("| Custo                                            |");
-        System.out.println("| Ataque Base                                      |");
-        System.out.println("| Tipo Elemental                                   |");
-        System.out.println("| Alcance                                          |");
-        System.out.println("| Velocidade de Ataque                             |");
-        System.out.println("| Estágio de Evolução                              |");
-
-        linha();
-    }
-
-    public static void cadastroHabilidade() {
-        limparTela();
-
-        titulo("CADASTRO DE HABILIDADE");
-
-        System.out.println("| Nome                                             |");
-        System.out.println("| Custo                                            |");
-        System.out.println("| Tipo Elemental                                   |");
-        System.out.println("| Dano                                             |");
-        System.out.println("| Cooldown                                         |");
-        System.out.println("| Ativável                                         |");
-        System.out.println("| Área de Efeito                                   |");
-
-        linha();
     }
 
     public static void telaSucesso(String mensagem) {

@@ -12,22 +12,14 @@ public class Main {
     private static int idPokemon = 1;
 
 
-    static void cadastrar(){
+    static void cadastrar(String menuSelecionado){
         Scanner menuCadastro = new Scanner(System.in);
         Scanner codTipoElementalSelecionado = new Scanner(System.in);
         Scanner codADESelecionado = new Scanner(System.in);
 
-        System.out.println("""
-                - - - - CADASTRAR - - - -
-                Digite o número correspondente ao cadastro que deseja realizar:
-                1. Pokémon
-                2. Habilidade
-                0. Encerrar Cadastro
-                """);
-        String menuSelecionado = menuCadastro.nextLine();
-
         switch (menuSelecionado) {
             case "1":
+                System.out.println("\n");
                 System.out.println("""
                         - - - - CADASTRAR POKEMON - - - -
                         Digite o nome do pokémon:""");
@@ -133,8 +125,9 @@ public class Main {
 
                 System.out.println(pokemon + "\n");
 
-                cadastrar();
+                cadastrar("0");
             case "2":
+                System.out.println("\n");
                 System.out.println("""
                         - - - - CADASTRAR HABILIDADE - - - -
                         Digite o nome da habilidade:""");
@@ -261,26 +254,27 @@ public class Main {
                 System.out.println("Habilidade cadastrada com sucesso!!!");
                 System.out.println(habilidade);
 
-                cadastrar();
+                cadastrar("0");
 
             case "0":
                 System.out.println("Cadastro encerrado!");
                 break;
             default:
                 System.out.println("Valor inválido!!!");
-                cadastrar();
+                cadastrar("0");
         }
     }
+
 
     public static void main(String[] args){
 
         Interface hud = new Interface();
         hud.menuPrincipal();
+        String opcao = pokebola.nextLine();
+        cadastrar(opcao);
 
         Habilidades habilidade1 = new Habilidades(1, "Choque do trovão", 50, TipoElemental.ELÉTRICO, 100, 2.5, true, AreaDeEfeito.DanoUnico);
         Pokemon pikachu = new Pokemon(1, "pikachu", 150, 1, TipoElemental.ELÉTRICO, 4, 2, Arrays.asList(habilidade1), 1);
-
-        //cadastrar();
 
 
     }

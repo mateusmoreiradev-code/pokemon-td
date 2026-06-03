@@ -26,9 +26,8 @@ public class Main {
             switch (menuSelecionado) {
                 case "1":
                     System.out.println("\n");
-                    System.out.println("""
-                            - - - - CADASTRAR POKEMON - - - -
-                            Digite o nome do pokémon:""");
+                    hud.titulo("CADASTRAR POKÉMON");
+                    System.out.println("Digite o nome do pokémon: ");
                     String nomePokemon = pokebola.nextLine();
 
                     System.out.println("Digite o custo: ");
@@ -108,7 +107,6 @@ public class Main {
                             break;
                         default:
                             hud.telaErro("Valor inválido! Tente novamente.");
-                            textArt.showWIP();
                             return;
                     }
 
@@ -212,7 +210,7 @@ public class Main {
                             teHabilidade = TipoElemental.PLANTA;
                             break;
                         default:
-                            System.out.println("Valor inválido! Tente novamente.");
+                            hud.telaErro("Valor inválido! Tente novamente.");
                             return;
                     }
 
@@ -262,12 +260,39 @@ public class Main {
                     habilidades.add(habilidade);
 
                     break;
+                case "3":
+                    if(pokemons.isEmpty()){
+                        hud.telaErro("Não há nenhum Pokémon cadastrado!\n Cadastre um Pokémon antes de listá-los!");
+                        break;
+                }
+
+                    hud.limparTela();
+                    hud.titulo("Lista de Pokémons");
+                    for (Pokemon listarPokemon : pokemons){
+                        System.out.println(listarPokemon);
+                        if(listarPokemon.nomePokemon.equalsIgnoreCase( "Pikachu")){
+                            textArt.showPikachu();
+                        }
+                    }
+                    break;
+                case "4":
+                    if(habilidades.isEmpty()){
+                        hud.telaErro("Não há nenhuma Habilidade cadastrada!\n Cadastre uma Habilidade antes de listá-las!");
+                        break;
+                    }
+                    hud.limparTela();
+                    hud.titulo("Lista de Habilidades");
+                    for (Habilidades listarHabilidades : habilidades){
+                        System.out.println(listarHabilidades);
+                    }
+                    break;
 
                 case "0":
-                    System.out.println("Cadastro encerrado!");
+                    hud.telaSucesso("Cadastro encerrado!");
                     repeticao = false;
                     break;
                 default:
+                    hud.limparTela();
                     textArt.showWIP();
                     System.out.println("\n");
                     break;
@@ -278,12 +303,10 @@ public class Main {
 
     public static void main(String[] args){
 
-
         cadastrar();
 
         Habilidades habilidade1 = new Habilidades(1, "Choque do trovão", 50, TipoElemental.ELÉTRICO, 100, 2.5, true, AreaDeEfeito.DanoUnico);
         Pokemon pikachu = new Pokemon(1, "pikachu", 150, 1, TipoElemental.ELÉTRICO, 4, 2, Arrays.asList(habilidade1), 1);
-
 
     }
 }

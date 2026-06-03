@@ -69,6 +69,12 @@ public class Habilidades{
     }
 
     public String toString() {
-        return "Habilidade: " + nomeHabilidade + ", Custo: " + custoHabilidade + ", Tipo Elemental: " + teHabilidade + ", Dano: " + danoHabilidade + ", Cooldown: " + cooldownHabilidade + ", Ativa: " + isAtivaHabilidade + ", Área de Efeito: " + adeHabilidade;
+        return "\nHabilidade: " + nomeHabilidade +
+                "\nCusto: " + custoHabilidade +
+                "\nTipo Elemental: " + teHabilidade +
+                "\nDano: " + danoHabilidade +
+                "\nCooldown: " + cooldownHabilidade +
+                "\nAtiva: " + isAtivaHabilidade +
+                "\nÁrea de Efeito: " + adeHabilidade;
     }
 }

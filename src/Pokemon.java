@@ -83,17 +83,18 @@ public class Pokemon extends Habilidades {
         this.evolucaoPokemon = evolucaoPokemon;
     }
 
+    @Override
     public String toString() {
         return "Pokemon{" +
-                "idPokemon=" + idPokemon +
-                ", nomePokemon='" + nomePokemon + '\'' +
-                ", custoPokemon=" + custoPokemon +
-                ", ataquePokemon=" + ataquePokemon +
-                ", tipoPokemon=" + tipoPokemon +
-                ", alcancePokemon=" + alcancePokemon +
-                ", velocidadeDeAtaquePokemon=" + velocidadeDeAtaquePokemon +
-                ", habilidadesPokemon=" + habilidadesPokemon +
-                ", evolucaoPokemon=" + evolucaoPokemon +
+                "ID: " + idPokemon +
+                "\nPokemon: " + nomePokemon +
+                "\nCusto: " + custoPokemon +
+                "\nAtaque: " + ataquePokemon +
+                "\nTipo: " + tipoPokemon +
+                "\nAlcance: " + alcancePokemon +
+                "\nVelocidade de Ataque: " + velocidadeDeAtaquePokemon +
+                "\nHabilidades: " + habilidadesPokemon +
+                "\nEstágio de Evolução: " + evolucaoPokemon +
                 '}';
     }
 }

@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Main {
     private static final Scanner pokebola = new Scanner(System.in);
-    public List<Habilidades> habilidades = new ArrayList<>();
-    public List<Pokemon> pokemons = new ArrayList<>();
+    public static final List<Habilidades> habilidades = new ArrayList<>();
+    public static final List<Pokemon> pokemons = new ArrayList<>();
 
     private static int idHabilidade = 1;
     private static int idPokemon = 1;
@@ -128,6 +128,7 @@ public class Main {
                     pokebola.nextLine();
 
                     System.out.println("\nPokémon cadastrado com sucesso!!!");
+                    pokemons.add(pokemon);
 
                     System.out.println(pokemon + "\n");
 
@@ -259,6 +260,7 @@ public class Main {
 
                     System.out.println("Habilidade cadastrada com sucesso!!!");
                     System.out.println(habilidade);
+                    habilidades.add(habilidade);
 
                     break;
 

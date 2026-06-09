@@ -68,6 +68,8 @@ public class Habilidades{
         this.adeHabilidade = adeHabilidade;
     }
 
+
+
     public String toString() {
         return "\nHabilidade: " + nomeHabilidade +
                 "\nCusto: " + custoHabilidade +

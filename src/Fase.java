@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fase {
+public class
+Fase {
     private int idFase;
     private Mapa mapa;
     private List<Onda> ondas = new ArrayList<>();

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Pokemon extends Habilidades {
@@ -82,6 +83,11 @@ public class Pokemon extends Habilidades {
     public void setEvolucaoPokemon(int evolucaoPokemon) {
         this.evolucaoPokemon = evolucaoPokemon;
     }
+
+    Pokemon pikachu = new Pokemon(1, "pikachu", 150, 1, TipoElemental.ELÉTRICO, 4, 2, Arrays.asList(choque_trovão), 1);
+    Pokemon charmander = new Pokemon(2, "charmander", 100, 2, TipoElemental.FOGO, 4, 2, Arrays.asList(chama_nenem), 1);
+    Pokemon bulbassauro = new Pokemon(3, "bulbassauro", 100, 3, TipoElemental.PLANTA, 4, 2, Arrays.asList(sipo_de_vinha), 1);
+    Pokemon squirtle = new Pokemon(4, "squirtle", 100, 4, TipoElemental.ÁGUA, 4, 2, Arrays.asList(jato_de_agua), 1);
 
     @Override
     public String toString() {

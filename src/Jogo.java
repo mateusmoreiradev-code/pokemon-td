@@ -5,6 +5,7 @@ public class Jogo {
     private int idHUD;
     private List<Fase> listaFases = new ArrayList<>();
 
+
     public Jogo(int idHUD, List<Fase> listaFases){
         this.idHUD = idHUD;
         this.listaFases = listaFases;

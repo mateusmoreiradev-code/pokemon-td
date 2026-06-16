@@ -29,14 +29,11 @@ public class Interface {
 
         titulo("POKEMON - TD");
 
-        System.out.println("| [1] Cadastrar Pokémon                           |");
-        System.out.println("| [2] Cadastrar Habilidade                        |");
-        System.out.println("| [3] Listar Pokémon                              |");
-        System.out.println("| [4] Listar Habilidades                          |");
+        System.out.println("| [1] Listar Pokémon                              |");
+        System.out.println("| [2] Comprar Pokémon                             |");
+        System.out.println("| [3] Listar Habilidades                          |");
         System.out.println("| [5] Buscar Pokémon                              |");
-        System.out.println("| [6] Buscar Habilidade                           |");
-        System.out.println("| [7] Associar Habilidade a Pokémon               |");
-        System.out.println("| [8] Excluir Pokémon                             |");
+        System.out.println("| [8] Vender Pokémon                              |");
         System.out.println("| [9] Excluir Habilidade                          |");
         System.out.println("| [0] Sair                                        |");
 
@@ -80,13 +77,13 @@ public class Interface {
         linha();
     }
 
-    public static void listarTiposElementais() {
-        titulo("TIPOS ELEMENTAIS");
+    public static void listarPokemon(Pokemon) {
+        titulo("Pokémons");
 
         int codigo = 1;
 
-        for (TipoElemental tipo : TipoElemental.values()) {
-            System.out.printf("| [%2d] %-42s |%n", codigo, tipo);
+        for (Pokemon pokeminhos : Pokemon.nomePokemon) {
+            System.out.printf("| [%2d] %-42s |%n", codigo, pokeminhos);
             codigo++;
         }
 

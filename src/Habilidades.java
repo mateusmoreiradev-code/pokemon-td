@@ -68,10 +68,6 @@ public class Habilidades{
         this.adeHabilidade = adeHabilidade;
     }
 
-    Habilidades choque_trovão = new Habilidades(1, "Choque do trovão", 50, TipoElemental.ELÉTRICO, 100, 2.5, true, AreaDeEfeito.DanoEmCadeia);
-    Habilidades chama_nenem = new Habilidades(2, "Chama nenem", 50, TipoElemental.FOGO, 100, 2.5, true, AreaDeEfeito.DanoUnico);
-    Habilidades sipo_de_vinha = new Habilidades(3, "Sipo de vinha", 50, TipoElemental.PLANTA, 100, 2.5, true, AreaDeEfeito.DanoUnico);
-    Habilidades jato_de_agua = new Habilidades(4, "Jato de água", 50, TipoElemental.ÁGUA, 100, 2.5, true, AreaDeEfeito.DanoUnico);
 
 
     public String toString() {

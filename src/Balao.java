@@ -50,4 +50,8 @@ public class Balao {
         this.isEnxame = isEnxame;
     }
 
+    public static void ganhaCoins(){
+
+    }
+
 }

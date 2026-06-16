@@ -4,6 +4,15 @@ public class Mapa {
     private int altura;
     private int[][] layout;
 
+    public static final int trilha = 0;
+    public static final int terra = 1;
+    public static final int agua = 2;
+    public static final int parede = 3;
+    public static final int lava = 4;
+
+    public static final int fim = 8;
+    public static final int inicio = 9;
+
     public Mapa(int idMapa, int largura, int altura){
         this.idMapa = idMapa;
         this.largura = largura;

@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class Interface {
 
@@ -77,14 +78,18 @@ public class Interface {
         linha();
     }
 
-    public static void listarPokemon(Pokemon) {
-        titulo("Pokémons");
+    public static void listarPokemons(List<Pokemon> pokemons) {
 
-        int codigo = 1;
+        titulo("LISTA DE POKÉMONS");
 
-        for (Pokemon pokeminhos : Pokemon.nomePokemon) {
-            System.out.printf("| [%2d] %-42s |%n", codigo, pokeminhos);
-            codigo++;
+        if (pokemons.isEmpty()) {
+            telaAviso("Nenhum Pokémon cadastrado!");
+            return;
+        }
+
+        for (Pokemon pokemon : pokemons) {
+            linha();
+            System.out.println(pokemon); // chama automaticamente o toString()
         }
 
         linha();

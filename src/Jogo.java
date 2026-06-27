@@ -20,4 +20,5 @@ public class Jogo {
     public void setListaFases(List<Fase> listaFases){
         this.listaFases = listaFases;
     }
+
 }

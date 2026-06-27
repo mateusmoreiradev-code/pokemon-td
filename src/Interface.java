@@ -95,16 +95,27 @@ public class Interface {
         linha();
     }
 
-    public static void listarAreasDeEfeito() {
-        titulo("ÁREA DE EFEITO");
+    public static void menu(){
+        linha();
+        System.out.println("====================");
+        System.out.println("POKEMON TD");
+        System.out.println("====================");
+        System.out.println("1 - Novo jogo");
+        System.out.println("2 - Pokedex");
+        System.out.println("3 - Créditos");
+        System.out.println("0 - Sair");
+        linha();
+    }
 
-        int codigo = 1;
-
-        for (AreaDeEfeito area : AreaDeEfeito.values()) {
-            System.out.printf("| [%2d] %-42s |%n", codigo, area);
-            codigo++;
-        }
-
+    public static void menuJogo(){
+        linha();
+        System.out.println("====================");
+        System.out.println("     POKEMON TD     ");
+        System.out.println("====================");
+        System.out.println("1 - Iniciar fase");
+        System.out.println("2 - Comprar Pokemon");
+        System.out.println("3 - Status");
+        System.out.println("0 - Sair");
         linha();
     }
 }

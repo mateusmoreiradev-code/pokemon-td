@@ -1,20 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Balao {
     private int idBalao;
     protected int hpBalao;
-    protected float vdmBalao;
+    protected double vdmBalao = 0.1;
     protected boolean isCamuflado;
     protected boolean isBlindado;
     protected boolean isEnxame;
+    private double x, y;
+    private List<Coordenadas> caminho;
+    private int indiceCaminho = 0;
 
-    public Balao(int idBalao, int hpBalao, float vdmBalao, boolean isCamuflado, boolean isBlindado, boolean isEnxame){
+    //CONSTRUTOR
+    public Balao(int idBalao, int hpBalao, boolean isCamuflado, boolean isBlindado, boolean isEnxame, List<Coordenadas> caminho){
         this.idBalao = idBalao;
         this.hpBalao = hpBalao;
-        this.vdmBalao = vdmBalao;
         this.isCamuflado = isCamuflado;
         this.isBlindado = isBlindado;
         this.isEnxame = isEnxame;
-    };
+        this.caminho = caminho;
+        this.x = caminho.get(0).x;
+        this.y = caminho.get(0).y;
+    }
 
+    //ENCAPSULAMENTO
     public int getHpBalao(){
         return hpBalao;
     }
@@ -22,10 +32,10 @@ public class Balao {
         this.hpBalao = hpBalao;
     }
 
-    public float getVdmBalao(){
+    public double getVdmBalao(){
         return vdmBalao;
     }
-    public void setVdmBalao(float vdmBalao){
+    public void setVdmBalao(double vdmBalao){
         this.vdmBalao = vdmBalao;
     }
 
@@ -48,6 +58,28 @@ public class Balao {
     }
     public void setIsEnxame(boolean isEnxame){
         this.isEnxame = isEnxame;
+    }
+
+    //METODOS
+    public void atualizar(){
+        if (indiceCaminho >= caminho.size()){
+            return;
+        }
+
+        Coordenadas alvo = caminho.get(indiceCaminho);
+
+        double dx = alvo.x - this.x;
+        double dy = alvo.y - this.y;
+        double distancia = Math.sqrt(dx * dx + dy * dy);
+        if (distancia < vdmBalao) {
+            this.x = alvo.x;
+            this.y = alvo.y;
+            indiceCaminho++;
+        } else {
+            // Move suavemente em direção ao alvo
+            this.x += (dx / distancia) * vdmBalao;
+            this.y += (dy / distancia) * vdmBalao;
+        }
     }
 
     public static void ganhaCoins(){
